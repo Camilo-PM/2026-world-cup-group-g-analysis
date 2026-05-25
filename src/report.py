@@ -8,69 +8,104 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 from configs.config import FINAL_DIR, BASE_DIR
 
 
-REPORTS_DIR = BASE_DIR / "reports"
-
-
 def main():
-    input_path = FINAL_DIR / "group_f_summary.csv"
+    input_path = FINAL_DIR / "group_g_summary.csv"
+    report_path = BASE_DIR / "reports" / "group_g_report.md"
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
 
     if not input_path.exists():
         print(f"No existe el archivo: {input_path}")
         return
 
-    df = pd.read_csv(input_path)
+    df = pd.read_csv(input_path, sep=";")
 
-    leader = df.iloc[0]
+    best_team = df.sort_values("Power Score", ascending=False).iloc[0]
+    best_attack = df.sort_values("Goals_For", ascending=False).iloc[0]
+    best_defense = df.sort_values("Goals_Against", ascending=True).iloc[0]
+    best_form = df.sort_values("Points_Form", ascending=False).iloc[0]
 
-    report = f"""# Group G Team Performance Analysis - FIFA World Cup 2026
+    report = f"""# FIFA World Cup 2026 - Group G Analysis
 
 ## Project Overview
 
-This project analyzes the recent performance of the national teams in Group G of the FIFA World Cup 2026.
+This project analyzes the recent form of the national teams in Group G of the FIFA World Cup 2026.
 
-The analysis is based on each team's last 10 matches and focuses on form, attacking performance, defensive performance, and goal difference.
+The analysis is based on each team's most recent available matches, using data collected from local FBref HTML files.
 
-## Teams Analyzed
+Teams analyzed:
 
 {", ".join(df["team"].tolist())}
 
+---
+
 ## Key Findings
 
-The team with the strongest recent form is **{leader["team"]}**, with **{leader["Points_Form"]} points** from the last 10 matches.
+- Highest Power Score: {best_team["team"]} with {best_team["Power Score"]}.
+- Best attacking record: {best_attack["team"]} with {best_attack["Goals_For"]} goals scored.
+- Best defensive record: {best_defense["team"]} with {best_defense["Goals_Against"]} goals conceded.
+- Best recent form: {best_form["team"]} with {best_form["Points_Form"]} points.
 
-{leader["team"]} also recorded a goal difference of **{leader["Goal_Difference"]}**, scoring **{leader["Goals_For"]}** goals and conceding **{leader["Goals_Against"]}**.
+---
 
-## Summary Table
+## Team Summary
 
-{df.to_markdown(index=False)}
+| Team | Matches | Wins | Draws | Losses | GF | GA | GD | Points Form | Form Index | Power Score |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+"""
+
+    for _, row in df.iterrows():
+        report += (
+            f"| {row['team']} "
+            f"| {row['Matches']} "
+            f"| {row['Wins']} "
+            f"| {row['Draws']} "
+            f"| {row['Losses']} "
+            f"| {row['Goals_For']} "
+            f"| {row['Goals_Against']} "
+            f"| {row['Goal_Difference']} "
+            f"| {row['Points_Form']} "
+            f"| {row['Form Index']} "
+            f"| {row['Power Score']} |\n"
+        )
+
+    report += """
+
+---
 
 ## Visualizations
 
-The project includes the following visualizations:
+The project generates the following visualizations:
 
-- Recent form ranking
-- Goal difference comparison
-- Attack vs defense comparison
+- ranking_form.png
+- goal_difference.png
+- attack_vs_defense.png
 
-## Data Notes
+These charts are saved in:
 
-The data was collected from locally saved FBref HTML files. This method was used to avoid request blocks and improve reproducibility.
+reports/figures/
 
-## Output Files
+---
 
-- `data/processed/group_f_last_10_clean.csv`
-- `data/final/group_f_summary.csv`
-- `reports/figures/ranking_form.png`
-- `reports/figures/goal_difference.png`
-- `reports/figures/attack_vs_defense.png`
+## Notes
+
+New Zealand has 9 matches available in the collected dataset, while the other teams have 10. This should be considered when comparing form and performance indicators.
+
+---
+
+## Methodology
+
+1. Local HTML files are collected from FBref.
+2. Match data is extracted and cleaned with Python.
+3. Team-level metrics are calculated.
+4. Visualizations are generated with Matplotlib.
+5. A Markdown report is created automatically.
 """
 
-    output_path = REPORTS_DIR / "group_f_report.md"
-    output_path.write_text(report, encoding="utf-8")
+    report_path.write_text(report, encoding="utf-8")
 
-    print(f"Reporte guardado en: {output_path}")
+    print(f"Reporte guardado en: {report_path}")
 
 
 if __name__ == "__main__":
     main()
-

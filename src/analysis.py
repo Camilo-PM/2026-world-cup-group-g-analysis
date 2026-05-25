@@ -29,12 +29,8 @@ def main():
         Goal_Difference=("goal_difference", "sum"),
         Avg_Goals_For=("gf", "mean"),
         Avg_Goals_Against=("ga", "mean"),
-        Points_Form=("points", "sum")
+        Points_Form=("points", "sum"),
     ).reset_index()
-
-    # =========================
-    # MÉTRICAS AVANZADAS
-    # =========================
 
     summary["Goals For per Game"] = (
         summary["Goals_For"] / summary["Matches"]
@@ -63,23 +59,15 @@ def main():
         + summary["Defense Index"] * 0.1
     ).round(2)
 
-    # =========================
-    # REDONDEAR
-    # =========================
-
     summary["Avg_Goals_For"] = summary["Avg_Goals_For"].round(2)
     summary["Avg_Goals_Against"] = summary["Avg_Goals_Against"].round(2)
-
-    # =========================
-    # ORDEN FINAL
-    # =========================
 
     summary = summary.sort_values(
         by=["Power Score", "Points_Form"],
         ascending=False
     )
 
-    output_path = FINAL_DIR / "group_f_summary.csv"
+    output_path = FINAL_DIR / "group_g_summary.csv"
 
     summary.to_csv(
         output_path,
@@ -94,4 +82,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

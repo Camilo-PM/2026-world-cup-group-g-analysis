@@ -9,23 +9,21 @@ PROCESSED_DIR = DATA_DIR / "processed"
 FINAL_DIR = DATA_DIR / "final"
 
 TEAMS = {
-    "Japan": [
-        HTML_DIR / "japan.html",
-        HTML_DIR / "japan_2025.html",
+    "Belgium": [
+        HTML_DIR / "belgium.html",
+        HTML_DIR / "belgium_2025.html",
     ],
-    "Netherlands": [
-        HTML_DIR / "netherlands.html",
-        HTML_DIR / "netherlands_2024.html",
-        HTML_DIR / "netherlands_2025.html",
+    "Egypt": [
+        HTML_DIR / "egypt.html",
+        HTML_DIR / "egypt_2025.html",
     ],
-    "Sweden": [
-        HTML_DIR / "sweden.html",
-        HTML_DIR / "sweden_2024.html",
-        HTML_DIR / "sweden_2025.html",
+    "Iran": [
+        HTML_DIR / "iran.html",
+        HTML_DIR / "iran_2025.html",
     ],
-    "Tunisia": [
-        HTML_DIR / "tunisia.html",
-        HTML_DIR / "tunisia_2025.html",
+    "New Zealand": [
+        HTML_DIR / "new_zealand.html",
+        HTML_DIR / "new_zealand_2025.html",
     ],
 }
 

@@ -1,0 +1,40 @@
+team,date,opponent,gf,ga,result,goal_difference,result_clean,points
+Belgium,2026-03-31,mx Mexico,1.0,1.0,D,0.0,Draw,1
+Belgium,2026-03-28,us United States,5.0,2.0,W,3.0,Win,3
+Belgium,2025-11-18,li Liechtenstein,7.0,0.0,W,7.0,Win,3
+Belgium,2025-11-15,kz Kazakhstan,1.0,1.0,D,0.0,Draw,1
+Belgium,2025-10-13,wls Wales,4.0,2.0,W,2.0,Win,3
+Belgium,2025-10-10,mk N. Macedonia,0.0,0.0,D,0.0,Draw,1
+Belgium,2025-09-07,kz Kazakhstan,6.0,0.0,W,6.0,Win,3
+Belgium,2025-09-04,li Liechtenstein,6.0,0.0,W,6.0,Win,3
+Belgium,2025-06-09,wls Wales,4.0,3.0,W,1.0,Win,3
+Belgium,2025-06-06,mk N. Macedonia,1.0,1.0,D,0.0,Draw,1
+Egypt,2026-03-31,es Spain,0.0,0.0,D,0.0,Draw,1
+Egypt,2026-03-27,sa Saudi Arabia,4.0,0.0,W,4.0,Win,3
+Egypt,2026-01-14,sn Senegal,0.0,1.0,L,-1.0,Loss,0
+Egypt,2026-01-10,ci Côte d'Ivoire,3.0,2.0,W,1.0,Win,3
+Egypt,2026-01-05,bj Benin,3.0,1.0,W,2.0,Win,3
+Egypt,2025-12-29,ao Angola,0.0,0.0,D,0.0,Draw,1
+Egypt,2025-12-26,za South Africa,1.0,0.0,W,1.0,Win,3
+Egypt,2025-12-22,zw Zimbabwe,2.0,1.0,W,1.0,Win,3
+Egypt,2025-10-12,gw Guinea-Bissau,1.0,0.0,W,1.0,Win,3
+Egypt,2025-10-08,dj Djibouti,3.0,0.0,W,3.0,Win,3
+Iran,2025-10-14,tz Tanzania,2.0,0.0,W,2.0,Win,3
+Iran,2025-10-10,ru Russia,1.0,2.0,L,-1.0,Loss,0
+Iran,2025-06-10,kp Korea DPR,3.0,0.0,W,3.0,Win,3
+Iran,2025-06-05,qa Qatar,0.0,1.0,L,-1.0,Loss,0
+Iran,2025-03-25,uz Uzbekistan,2.0,2.0,D,0.0,Draw,1
+Iran,2025-03-20,ae UAE,2.0,0.0,W,2.0,Win,3
+Iran,2024-11-19,kg Kyrgyz Republic,3.0,2.0,W,1.0,Win,3
+Iran,2024-11-14,kp Korea DPR,3.0,2.0,W,1.0,Win,3
+Iran,2024-10-15,qa Qatar,4.0,1.0,W,3.0,Win,3
+Iran,2024-10-10,uz Uzbekistan,0.0,0.0,D,0.0,Draw,1
+New Zealand,2025-11-18,ec Ecuador,0.0,2.0,L,-2.0,Loss,0
+New Zealand,2025-11-15,co Colombia,1.0,2.0,L,-1.0,Loss,0
+New Zealand,2025-10-14,no Norway,1.0,1.0,D,0.0,Draw,1
+New Zealand,2025-10-09,pl Poland,0.0,1.0,L,-1.0,Loss,0
+New Zealand,2025-03-24,nc New Caledonia,3.0,0.0,W,3.0,Win,3
+New Zealand,2025-03-21,fj Fiji,7.0,0.0,W,7.0,Win,3
+New Zealand,2024-11-18,ws Samoa,8.0,0.0,W,8.0,Win,3
+New Zealand,2024-11-15,vu Vanuatu,8.0,1.0,W,7.0,Win,3
+New Zealand,2024-10-11,pf Tahiti,3.0,0.0,W,3.0,Win,3
