@@ -1,0 +1,11 @@
+date,time,comp,round,day,venue,result,gf,ga,opponent,poss,attendance,captain,formation,opp_formation,referee,match_report,notes,team
+2026-03-31,20:45 (13:45),WCQ,Second round — Finals,Tue,Home,W,3.0,2.0,pl Poland,33.0,49627.0,Victor Lindelöf,3-4-3,3-4-3,Slavko Vinčič,Match Report,,Sweden
+2026-03-26,20:45 (14:45),WCQ,Second round — Semi-finals,Thu,Neutral,W,3.0,1.0,ua Ukraine,32.0,18846.0,Victor Lindelöf,3-4-3,4-1-4-1,João Pinheiro,Match Report,,Sweden
+2025-11-18,20:45 (14:45),WCQ,First round,Tue,Home,D,1.0,1.0,si Slovenia,61.0,25724.0,Victor Lindelöf,4-4-2,5-4-1,Maurizio Mariani,Match Report,,Sweden
+2025-11-15,20:45 (14:45),WCQ,First round,Sat,Away,L,1.0,4.0,ch Switzerland,41.0,26458.0,Isak Hien,4-4-2,4-2-3-1,Erik Lambrechts,Match Report,,Sweden
+2025-10-13,20:45 (13:45),WCQ,First round,Mon,Home,L,0.0,1.0,xk Kosovo,68.0,36571.0,Victor Lindelöf,3-5-2,3-1-4-2,Danny Makkelie,Match Report,,Sweden
+2025-10-10,20:45 (13:45),WCQ,First round,Fri,Home,L,0.0,2.0,ch Switzerland,41.0,50151.0,Alexander Isak,3-5-2,4-3-3,Anthony Taylor,Match Report,,Sweden
+2025-09-08,20:45 (13:45),WCQ,First round,Mon,Away,L,0.0,2.0,xk Kosovo,69.0,12887.0,Isak Hien,3-5-2,4-4-2,Allard Lindhout,Match Report,,Sweden
+2025-09-05,20:45 (13:45),WCQ,First round,Fri,Away,D,2.0,2.0,si Slovenia,59.0,15679.0,Isak Hien,3-5-2,4-4-2,Jose Maria Sánchez,Match Report,,Sweden
+2025-06-10,19:00 (12:00),Friendlies (M),Friendlies (M),Tue,Home,W,4.0,3.0,dz Algeria,,15148.0,Isak Hien,3-5-2,4-1-4-1,Robert Harvey,Match Report,,Sweden
+2025-06-06,19:30 (12:30),Friendlies (M),Friendlies (M),Fri,Away,W,2.0,0.0,hu Hungary,,53865.0,Isak Hien,3-5-2,3-4-3,Atilla Karaoğlan,Match Report,,Sweden
